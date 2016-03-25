@@ -46,6 +46,16 @@ API
     public static Optional<Boolean> parseBoolean(final String booleanString);
 ```
 
+Maven
+=====
+
+```xml
+    <dependency>
+        <groupId>com.github.spjoe</groupId>
+        <artifactId>optional-parser</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+```
 
 Changelog
 =========
