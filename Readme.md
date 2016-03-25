@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/spjoe/optional-parsers.svg?branch=master)](https://travis-ci.org/spjoe/optional-parsers)
-[![Coverage Status](https://coveralls.io/repos/spjoe/optional-parsers/badge.png?branch=master)](https://coveralls.io/r/spjoe/)
+[![Coverage Status](https://coveralls.io/repos/github/spjoe/optional-parsers/badge.svg?branch=master)](https://coveralls.io/github/spjoe/optional-parsers?branch=master)
 Optional Parsers
 ================
 
