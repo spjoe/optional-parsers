@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/spjoe/optional-parsers.svg?branch=master)](https://travis-ci.org/spjoe/optional-parsers)
 Optional Parsers
 ================
 

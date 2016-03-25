@@ -10,5 +10,10 @@ package com.github.spjoe.functional;
  */
 @FunctionalInterface
 public interface ThrowableSupplier<T, E extends Throwable> {
+    /**
+     * Gets a result.
+     * @return a result
+     * @throws E a generic throwable.
+     */
     T get() throws E;
 }

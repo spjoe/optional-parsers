@@ -107,7 +107,7 @@ public class OptionalParsersTest {
 
     @Test
     public void parseInt_aInvalidIntegerString_shallReturnEmpty() throws Exception {
-        Optional<Long> actual = OptionalParsers.parseLong("aInvalidIntegerString");
+        Optional<Integer> actual = OptionalParsers.parseInt("aInvalidIntegerString");
 
         assertThat(actual, isEmpty());
     }
@@ -122,7 +122,7 @@ public class OptionalParsersTest {
 
     @Test
     public void parseFloat_aInvalidFloatString_shallReturnEmpty() throws Exception {
-        Optional<Long> actual = OptionalParsers.parseLong("aInvalidFloatString");
+        Optional<Float> actual = OptionalParsers.parseFloat("aInvalidFloatString");
 
         assertThat(actual, isEmpty());
     }
@@ -137,7 +137,7 @@ public class OptionalParsersTest {
 
     @Test
     public void parseDouble_aInvalidDoubleString_shallReturnEmpty() throws Exception {
-        Optional<Long> actual = OptionalParsers.parseLong("aInvalidDoubleString");
+        Optional<Double> actual = OptionalParsers.parseDouble("aInvalidDoubleString");
 
         assertThat(actual, isEmpty());
     }
