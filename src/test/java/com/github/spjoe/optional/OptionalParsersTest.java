@@ -7,13 +7,16 @@ import org.hamcrest.Matcher;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import java.lang.reflect.Constructor;
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.Optional;
 
 import static com.github.spjoe.optional.matcher.OptionalMatchers.hasValue;
 import static com.github.spjoe.optional.matcher.OptionalMatchers.isEmpty;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.*;
 
 // TODO 2016-03-25: Use https://github.com/npathai/hamcrest-optional when it has a good license.
 
@@ -60,7 +63,7 @@ public class OptionalParsersTest {
     @DataProvider
     public static Object[][] booleanExampleValues() {
         return new Object[][] {
-                { "invalidBooleanString", isEmpty() },
+                { "invalidBooleanString", isEmpty() }, { null, isEmpty() },
                 { "false", hasValue(false) }, { "true", hasValue(true) },
                 { "FaLSe", hasValue(false) }, { "tRuE", hasValue(true) },
         };
@@ -186,5 +189,19 @@ public class OptionalParsersTest {
         Optional<Boolean> actual = OptionalParsers.parseBoolean(booleanString);
 
         assertThat(actual, matcher);
+    }
+
+    @Test
+    public void ctor_none_shallBePrivateUtilityCtor() throws Exception {
+        Constructor[] ctors = OptionalParsers.class.getDeclaredConstructors();
+        assertThat("Utility class should only have one constructor", ctors.length, is(1));
+
+        Constructor ctor = ctors[0];
+        assertThat("Utility class constructor should be inaccessible", ctor.isAccessible(), is(false));
+
+        ctor.setAccessible(true); // obviously we'd never do this in production
+        assertThat("You'd expect the construct to return the expected type",
+                ctor.newInstance().getClass(),
+                equalTo(OptionalParsers.class));
     }
 }
