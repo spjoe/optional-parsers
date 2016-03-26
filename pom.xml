@@ -21,6 +21,26 @@
         </license>
     </licenses>
 
+    <issueManagement>
+        <url>https://github.com/spjoe/optional-parsers/issues</url>
+        <system>GitHub Issues</system>
+    </issueManagement>
+
+    <scm>
+        <url>https://github.com/spjoe/optional-parsers</url>
+        <connection>scm:git:git://github.com/spjoe/optional-parsers.git</connection>
+        <developerConnection>scm:git:git@github.com:spjoe/optional-parsers.git</developerConnection>
+    </scm>
+
+    <developers>
+        <developer>
+            <email>cdellmour@gmail.com</email>
+            <name>Camillo Dell'mour</name>
+            <url>https://github.com/spjoe</url>
+            <id>spjoe</id>
+        </developer>
+    </developers>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
