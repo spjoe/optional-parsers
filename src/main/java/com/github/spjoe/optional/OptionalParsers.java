@@ -132,9 +132,9 @@ public final class OptionalParsers {
 
     /**
      * Parses the string argument as a boolean.
-     * If the given string reads case insensitive "false" then an {@link Optional} containing {@link Boolean#FALSE} returns.
-     * If the given string reads case insensitive "true" then an {@link Optional} containing {@link Boolean#TRUE} returns.
-     * Otherwise {@link Optional#empty()} returns.
+     * If the given string reads case insensitive "false" then it returns an {@link Optional} containing {@link Boolean#FALSE}.
+     * If the given string reads case insensitive "true" then it returns an {@link Optional} containing {@link Boolean#TRUE}.
+     * Otherwise it returns {@link Optional#empty()}.
      * @param booleanString which could represent a valid boolean.
      * @return an {@link Optional}.
      */
