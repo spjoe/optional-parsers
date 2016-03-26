@@ -16,8 +16,6 @@
 
 package com.github.spjoe.optional;
 
-import com.github.spjoe.functional.ThrowableSupplier;
-
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.Optional;

@@ -14,7 +14,7 @@
     limitations under the License.
 */
 
-package com.github.spjoe.functional;
+package com.github.spjoe.optional;
 
 // TODO 2016-03-25: extract this to a small functional support library.
 
@@ -25,7 +25,7 @@ package com.github.spjoe.functional;
  * @param <E> the type of exception to be handled
  */
 @FunctionalInterface
-public interface ThrowableSupplier<T, E extends Throwable> {
+interface ThrowableSupplier<T, E extends Throwable> {
     /**
      * Gets a result.
      * @return a result
