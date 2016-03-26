@@ -3,10 +3,10 @@
 Optional Parsers
 ================
 
-A simple numbers and boolean parser which returns a Optional and do not
+A simple numbers and boolean parser which returns an Optional and do not
 raise any Exception.
 
-This library has no third party compile time dependencies, 
+This library do not have any third party compile time dependencies, 
 the only dependency is Java8.
 
 Motivation
@@ -28,6 +28,9 @@ API
 ===
 
 ```java
+package com.github.spjoe.optional;
+
+public final class OptionalParsers {
     public static Optional<Long> parseLong(final String longString);
     public static Optional<Long> parseLong(final String longString, int radix);
     
@@ -44,6 +47,7 @@ API
     public static Optional<Double> parseDouble(final String doubleString);
 
     public static Optional<Boolean> parseBoolean(final String booleanString);
+}
 ```
 
 Maven
@@ -53,7 +57,7 @@ Maven
     <dependency>
         <groupId>com.github.spjoe</groupId>
         <artifactId>optional-parser</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>0.0.1</version>
     </dependency>
 ```
 
@@ -61,5 +65,5 @@ Changelog
 =========
 v0.0.1
 ------
-### Released at 2016-xx-xx
+### Released at 26-03-2016
 - Initial release of this library
