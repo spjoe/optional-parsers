@@ -56,7 +56,7 @@ Maven
 ```xml
     <dependency>
         <groupId>com.github.spjoe</groupId>
-        <artifactId>optional-parser</artifactId>
+        <artifactId>optional-parsers</artifactId>
         <version>0.0.1</version>
     </dependency>
 ```
